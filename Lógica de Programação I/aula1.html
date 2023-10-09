@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aula1.css">
+    <title>Aula 1 - Exerccios</title>
+</head>
+<body>
+    <main>
+        <h1>Calculadora de Taxa de Entrega</h1>
+        <p>Insira  o valor total da compra e taxa definida pelo estabelecimento</p>
+
+        <div class="calcular">
+            <div class="calcular__sec">
+                <p>Valor da Compra (R$):</p>
+                <input type="number" id="valorCompra" placeholder="Insira os valores">
+            </div>
+            <div class="calcular__sec">
+                <p>Taxa de Entrega (%):</p>
+                <input type="number" id="taxaEntrega" placeholder="Insira os valores">
+            </div>
+            <button type="submit" onclick="calcularTaxa()">Calcular</button>
+
+            <div class="respostas">
+                <p id="mensagemCalc"></p>
+                <p id="valorReceber"></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function calcularTaxa(){
+            const vCompra = document.getElementById("valorCompra").value;
+            const taxaEntrega = document.getElementById("taxaEntrega").value;
+            var calculoTaxa = (vCompra * (taxaEntrega / 100) );
+            var calcAreceber = vCompra - (vCompra * (10 / 100));
+
+            var msgCalc = document.getElementById("mensagemCalc");
+            var msgReceber = document.getElementById("valorReceber");
+
+            msgCalc.innerHTML = "Taxa de Entrega: R$: " + calculoTaxa;
+            msgReceber.innerHTML = "Valor a Receber: R$: " + calcAreceber;
+
+            if(vCompra >= 500){
+                alert("Compra acima de 500 reais!! Se organize")
+            }
+        }
+    </script>
+</body>
+</html>

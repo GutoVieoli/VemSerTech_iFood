@@ -25,7 +25,6 @@ let emails = [
 ];
 
 
-if(funcoes.getDayOfWeek() == 'Wednesday'){
-    const corpoEmail = funcoes.createEmailBody();
-    funcoes.sendToList(emails, corpoEmail.emailSubject, corpoEmail.emailBody)
+if(funcoes.getDayOfWeek() == 'Monday'){
+    funcoes.sendToList(emails)
 }

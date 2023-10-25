@@ -16,11 +16,11 @@ function createEmailBody() {
       Esperamos que você esteja tão empolgado quanto nós, porque na CarStore, estamos prontos para tornar seus sonhos de carro novo realidade!
       Temos promoções incríveis que você não vai querer perder.
 
-      O Carro do Ano 2023:....
+      O Carro do Ano 2023: Porsche 911 S/T
 
-      Oferta Especial de Financiamento: .....
+      Oferta Especial de Financiamento: Financie seu carro em até 60 meses com parcelas que cabem no seu bolso!
 
-      Carros Mais Vendidos: .....
+      Carros Mais Vendidos: Porsche 911, BMW M3, Ford Mustang, Porsche Taycan e Jaguar F-Type.
 
       Não espere! Estas promoções são por tempo limitado. Marque já a sua visita à CarStore e dê o próximo passo em direção ao carro dos seus sonhos.
 
@@ -32,15 +32,18 @@ function createEmailBody() {
     return {emailSubject, emailBody};
 }
 
-function sendToList(emails, subject, body){
+function sendToList(emails){
     emails.forEach(e => {
         if(e.receive == true)
-            sendEmails(e.email, subject, body);
+            sendEmails(e.email);
     });
 }
 
-function sendEmails(email, subject, body) {
+function sendEmails(email) {
     try {
+        const corpoEmail = createEmailBody();
+        subject = corpoEmail.emailSubject;
+        body = corpoEmail.emailBody;
         const result = enviarEmail(email, subject, body)
         if (result.status == "Error"){
             throw new Error(result.message)
@@ -54,4 +57,4 @@ function sendEmails(email, subject, body) {
 }
 
 
-module.exports =  {getDayOfWeek,  sendToList, createEmailBody};
+module.exports =  {getDayOfWeek,  sendToList};

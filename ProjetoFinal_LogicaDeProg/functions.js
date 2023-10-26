@@ -11,23 +11,33 @@ function getDayOfWeek() {
 function createEmailBody() {
     const emailSubject = ` Grandes Promoções de Carros na CarStore - Não perca esta oportunidade!`
     const emailBody = `
-      Olá,
-  
-      Esperamos que você esteja tão empolgado quanto nós, porque na CarStore, estamos prontos para tornar seus sonhos de carro novo realidade!
-      Temos promoções incríveis que você não vai querer perder.
+    Olá, [Cliente],
 
-      O Carro do Ano 2023: Porsche 911 S/T
+    Esperamos que você esteja tão animado quanto nós, pois na CarStore, estamos prontos para fazer seus sonhos de ter um carro novo se tornarem realidade! Temos promoções incríveis que você não vai querer perder.
 
-      Oferta Especial de Financiamento: Financie seu carro em até 60 meses com parcelas que cabem no seu bolso!
+    O Carro do Ano 2023:
+    Eleito por especialistas, o Honda HR-V é a estrela do momento. Com seu design imponente, alto desempenho com baixo consumo de combustível, amplo espaço interno e conectividade de ponta, ele proporciona uma experiência única.
 
-      Carros Mais Vendidos: Porsche 911, BMW M3, Ford Mustang, Porsche Taycan e Jaguar F-Type.
+    Carros Mais Vendidos:
+    Para tornar sua escolha ainda mais fácil, aqui está uma lista dos carros mais vendidos do momento:
 
-      Não espere! Estas promoções são por tempo limitado. Marque já a sua visita à CarStore e dê o próximo passo em direção ao carro dos seus sonhos.
+    Fiat Strada
+    Volkswagen Polo
+    Chevrolet Onix
+    Hyundai HB20
+    Condições Incríveis:
 
+    Financiamento Flexível: Oferecemos opções de financiamento com taxas altamente competitivas.
+    Valorização do seu Usado: Se você tem um veículo usado, aceitamos como parte do pagamento e garantimos a melhor avaliação do mercado.
+    Garantia Estendida: Todos os nossos veículos incluem uma garantia estendida para garantir sua tranquilidade total.
+    Estamos à sua disposição para agendar um test drive, responder a qualquer pergunta que você possa ter ou ajudá-lo a escolher o veículo perfeito para você. Não perca esta oportunidade de adquirir um carro novo e emocionante!
 
-      Atenciosamente,
-      Leonardo S.
-      CarStore
+    Mas lembre-se, essas promoções são por tempo limitado. Marque já a sua visita à CarStore e dê o próximo passo em direção ao carro dos seus sonhos.
+
+    Atenciosamente,
+
+    Leonardo S.
+    CarStore
     `;
     return {emailSubject, emailBody};
 }
